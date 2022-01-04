@@ -6,5 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;
 
-public interface UsersAnswearRepository extends JpaRepository<UserAnswear, UUID> {
+public interface UsersAnswearRepository extends JpaRepository<UserAnswear, Integer> {
+    boolean existsByQuestionId(Integer questionId);
 }
