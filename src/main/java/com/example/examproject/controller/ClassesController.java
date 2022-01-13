@@ -22,7 +22,7 @@ public class ClassesController {
     @Autowired
     ClassService classService;
 
-    @PostMapping
+    @PostMapping()
     public HttpEntity<ApiResponse> add(@RequestBody Class classes) {
 
         ApiResponse apiResponse = classService.addClass(classes);

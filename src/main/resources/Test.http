@@ -1,0 +1,30 @@
+POST http://localhost:8080/api/test
+Content-Type: application/json
+
+{
+  "testTitle": "g50 uchun"
+}
+
+###
+POST http://localhost:8082/api/question
+Content-Type: application/json
+
+{
+
+}
+
+###
+POST http://localhost:80/api/item
+Content-Type: application/json
+
+{}
+
+###
+POST http://localhost:8080/api/classes
+Content-Type: application/json
+
+{
+  "className": "g50"
+}
+
+###

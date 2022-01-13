@@ -28,6 +28,8 @@ public class User implements UserDetails {
     private String username;
   @Column(nullable = false)
     private String password;
+  @Column(nullable = false,unique = true)
+  private String phoneNumber;
   @Column(nullable = false)
   private boolean active;
     @ManyToOne
@@ -76,11 +78,11 @@ public class User implements UserDetails {
         return enabled;
     }
 
-    public User(UUID id, String fullName, String username, String password, Role role, boolean enabled) {
-        this.id = id;
+    public User( String fullName, String username, String password, String phoneNumber,Role role, boolean enabled) {
         this.fullName=fullName;
         this.password = password;
         this.username=username;
+        this.phoneNumber=phoneNumber;
         this.role=role;
         this.enabled = enabled;
     }

@@ -21,7 +21,7 @@ public class TestController {
     TestService testService;
 
    @PreAuthorize(value = "hasAuthority('Add_Test')")
-   @PostMapping
+   @PostMapping()
    public HttpEntity<?> add(@RequestBody TestDTO testDTO){
        ApiResponse apiResponse = testService.addTest(testDTO);
        return ResponseEntity.status(apiResponse.isSucess()?201:409).body(apiResponse);
@@ -34,7 +34,7 @@ public class TestController {
    }
     @PreAuthorize(value = "hasAuthority('Read_Test')")
 
-    @GetMapping
+    @GetMapping()
     public HttpEntity<?> getAll(){
        List<Test> all = testService.getAll();
        return ResponseEntity.ok(all);

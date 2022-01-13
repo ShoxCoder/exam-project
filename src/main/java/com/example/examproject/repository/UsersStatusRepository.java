@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;
 
-public interface UsersStatusRepository extends JpaRepository<UserStatus, UUID> {
+public interface UsersStatusRepository extends JpaRepository<UserStatus, Integer> {
 
+    boolean existsByUserId(UUID id);
 }

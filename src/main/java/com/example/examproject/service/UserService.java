@@ -24,10 +24,12 @@ public class UserService {
 
     public ApiResponse saveUser(UserDTO userDTO) {
         User user = new User();
-        if (!userRepository.existByUsername(userDTO.getUsername())) {
+        if (!userRepository.existByPhoneNumber(userDTO.getPhoneNumber())) {
 
             Optional<Role> optionalRole = roleRepository.findById(userDTO.getRoleId());
             user.setUsername(userDTO.getUsername());
+            user.setRole(optionalRole.get());
+            user.setPhoneNumber(userDTO.getPhoneNumber());
             user.setFullName(user.getFullName());
             user.setPassword(userDTO.getPasssword());
 

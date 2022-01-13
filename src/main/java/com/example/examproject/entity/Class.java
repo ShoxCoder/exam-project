@@ -17,8 +17,7 @@ import javax.persistence.ManyToOne;
 public class Class extends AbsEntity {
     @Column(nullable = false)
     private String className;
-@ManyToOne
-    private School school;
+
 
 
 }

@@ -12,7 +12,15 @@ public enum Permission {
     Add_Test,
     Delete_test,
     Edit_Test,
-    Read_Test
+    Read_Test,
+
+    // savol qo'shish
+
+    Add_Question,
+    Delete_Question,
+    Edit_Question,
+    Read_Question
+
 
 
 }
